@@ -51,14 +51,10 @@ include_once('header.php')
                   <tr>
                     <th>ID</th>
                     <th>To</th>
-                    
-                   
                     <th>From</th>
-				
 					<th>Voice</th>
 					<th>status</th>
                      <th>Date time</th>
-                    
                      <th>Delete</th>
                       
                    
@@ -76,9 +72,7 @@ include_once('header.php')
 					  <td><?php echo $row['user_number']; ?></td>
                           <td><?php echo $row['twilio_number']; ?></td>      
                           
-						 
-                          
-                         
+
 						   <td><?php if($row['voice_file'] != '') {?><a href="<?php echo $row['voice_file']; ?>" target="_blank">Play</a><?php } else { echo  "-"; } ?></td>
                           <td><?php echo $row['readyToCall']; ?></td>
                           <td><?php echo $row['date_time']; ?></td>

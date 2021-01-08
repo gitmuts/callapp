@@ -5,7 +5,7 @@ $dbhost = 'localhost';
 
 $dbuser = 'root';
 
-$dbpass = '!QAZ2wsx';
+$dbpass = '';
 
 $dbname = 'snowbros_chessy';
 $con= new mysqli($dbhost, $dbuser, $dbpass,$dbname);

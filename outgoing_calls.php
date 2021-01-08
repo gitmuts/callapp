@@ -54,7 +54,7 @@ $token = $capability->generateToken();
         $("#hangup_button").fadeOut();
         $("#call_button").fadeIn();
         console.log('ended');
-        console.log(conn,status());
+        console.log(conn);
     });
 
 
@@ -266,7 +266,6 @@ $token = $capability->generateToken();
     <!-- /.conainer-fluid -->
 
 </main>
-
 </div>
 <script>
     function check_blacklist(elem) {

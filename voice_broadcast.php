@@ -1,20 +1,18 @@
-<?php 
+<?php
 
 include_once('header.php')
 
 ?>
 
 
+<!-- Main content -->
 
-    <!-- Main content -->
-
-    <main class="main">
-
+<main class="main">
 
 
-      <!-- Breadcrumb -->
+    <!-- Breadcrumb -->
 
-      <ol class="breadcrumb">
+    <ol class="breadcrumb">
 
         <li class="breadcrumb-item">Home</li>
 
@@ -38,243 +36,209 @@ include_once('header.php')
 
         </li> -->
 
-      </ol>
+    </ol>
 
 
-
-      <div class="container-fluid">
-
+    <div class="container-fluid">
 
 
         <div class="animated fadeIn">
 
-          
 
-         
+            <div class="row">
 
-          <div class="row">
+                <div class="col-lg-12">
 
-            <div class="col-lg-12">
+                    <div class="card">
 
-              <div class="card">
+                        <div class="card-header">
 
-                <div class="card-header">
+                            <i class="fa fa-phone"></i>Voice Broadcasting
 
-                  <i class="fa fa-phone"></i>Voice Broadcasting
+                            <!-- <div class="card-actions">
 
-                  <!-- <div class="card-actions">
+                              <a href="#" class="btn-setting"><i class="icon-settings"></i></a>
 
-                    <a href="#" class="btn-setting"><i class="icon-settings"></i></a>
+                              <a href="#" class="btn-minimize"><i class="icon-arrow-up"></i></a>
 
-                    <a href="#" class="btn-minimize"><i class="icon-arrow-up"></i></a>
+                              <a href="#" class="btn-close"><i class="icon-close"></i></a>
 
-                    <a href="#" class="btn-close"><i class="icon-close"></i></a>
-
-                  </div> -->
-
-                </div>
-
-                <div class="card-body col-lg-7">
-
-                  <form class="form-horizontal" id="formValidate2" data-validate="parsley" method="post" action="get_voice_broadcast.php" name="client_record" enctype="multipart/form-data" novalidate>
-
-                    
-
-                    <div class="form-group">
-
-                      <label class="col-form-label" for="appendedInput">Twilio Number</label>
-
-                      <div class="controls">
-
-                        <div class="input-group">
-
-                          <select id="sl" class="form-control select2-single select2-hidden-accessible" tabindex="-1" aria-hidden="true"  name="twilio_number" required>
-
-                         
-
-          
-
-
-
-    <?php
-
-        $query33 = mysqli_query($con,"select * from tapp_twilio_number where service_type='twilio'") ;
-
-        $i = 1;
-
-        while($row3 = mysqli_fetch_array($query33) )
-
-        {
-
-    
-
-        $number=$row3['number'];
-
-        ?>
-
-        <option value="<?php echo $number; ?>"><?php echo $number; ?> </option>
-
-       <?php
-
-     }
-
-    ?>
-
-         </select>
-
-                         
-
-                     </div>
-
-                       
-
-                      </div>
-
-                    </div>
-
-
-
-                    
-
-
-
-
-	   
-	   
-
-	   
-	   
-	   <div class="row" id="second_box" >
-
-           <div class="col-md-12">
-		   
-<div class="form-group">
-
-            <label class="control-label">Upload Audio File</label>
-
-            <div class="upload-file">
-
-                    <input style="cursor:pointer;" type="file" id="upload-demo" name="file1" class="upload-demo" required>
-					
-<a href="voice_upload/sample_voice.mp3" download><input type="button" class="btn btn-success" value="Download Sample"/></a>
-                    <label data-title="Select file" for="upload-demo">
-
-                     <span data-title="No file selected..."></span>
-
-                    </label>
-
-                  </div>
-
-            <input type="hidden" id="dtp_input1" value="" /><br/>
-
-           </div>
-
-</div>
-
-</div>
-	   
-	   
-	   
-	   
-	   
-	   
-<div class="row" id="second_box" >
-
-           <div class="col-md-12">
-		   
-<div class="form-group">
-
-            <label class="control-label">Upload Numbers File</label>
-
-            <div class="upload-file">
-
-                    <input style="cursor:pointer;" type="file" id="upload-demo" name="file" class="upload-demo" required>
-<a href="upload/sample_bulk.xlsx"><input type="button" class="btn btn-success" value="Download Sample"/></a>
-                    <label data-title="Select file" for="upload-demo">
-
-                     <span data-title="No file selected..."></span>
-
-                    </label>
-
-                  </div>
-
-            <input type="hidden" id="dtp_input1" value="" /><br/>
-
-           </div>
-
-</div>
-
-</div>
-
-
-                   
-
-					
-					
-					 <div class="form-group emoji-contant-align">
-
-                      <label class="col-form-label" for="appendedPrependedInput"></label>
-
-                      <div class="controls">
-
-                        <div class="input-prepend input-group">
-
-                         <input type="hidden" value="9000000000" name="agent_number"  class="form-control" placeholder="Agent Number"  required>
+                            </div> -->
 
                         </div>
 
-                      </div>
+                        <div class="card-body col-lg-7">
+
+                            <form class="form-horizontal" id="formValidate2" data-validate="parsley" method="post"
+                                  action="get_voice_broadcast.php" name="client_record" enctype="multipart/form-data"
+                                  novalidate>
+
+
+                                <div class="form-group">
+
+                                    <label class="col-form-label" for="appendedInput">Twilio Number</label>
+
+                                    <div class="controls">
+
+                                        <div class="input-group">
+
+                                            <select id="sl"
+                                                    class="form-control select2-single select2-hidden-accessible"
+                                                    tabindex="-1" aria-hidden="true" name="twilio_number" required>
+
+
+                                                <?php
+
+                                                $query33 = mysqli_query($con, "select * from tapp_twilio_number where service_type='twilio'");
+
+                                                $i = 1;
+
+                                                while ($row3 = mysqli_fetch_array($query33)) {
+
+
+                                                    $number = $row3['number'];
+
+                                                    ?>
+
+                                                    <option value="<?php echo $number; ?>"><?php echo $number; ?> </option>
+
+                                                    <?php
+
+                                                }
+
+                                                ?>
+
+                                            </select>
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row" id="second_box">
+
+                                    <div class="col-md-12">
+
+                                        <div class="form-group">
+
+                                            <label class="control-label">Upload Audio File</label>
+
+                                            <div class="upload-file">
+
+                                                <input style="cursor:pointer;" type="file" id="upload-demo" name="file1"
+                                                       class="upload-demo" required>
+
+                                                <a href="voice_upload/sample_voice.mp3" download><input type="button"
+                                                                                                        class="btn btn-success"
+                                                                                                        value="Download Sample"/></a>
+                                                <label data-title="Select file" for="upload-demo">
+
+                                                    <span data-title="No file selected..."></span>
+
+                                                </label>
+
+                                            </div>
+
+                                            <input type="hidden" id="dtp_input1" value=""/><br/>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row" id="second_box">
+
+                                    <div class="col-md-12">
+
+                                        <div class="form-group">
+
+                                            <label class="control-label">Upload Numbers File</label>
+
+                                            <div class="upload-file">
+
+                                                <input style="cursor:pointer;" type="file" id="upload-demo" name="file"
+                                                       class="upload-demo" required>
+                                                <a href="upload/sample_bulk.xlsx"><input type="button"
+                                                                                         class="btn btn-success"
+                                                                                         value="Download Sample"/></a>
+                                                <label data-title="Select file" for="upload-demo">
+
+                                                    <span data-title="No file selected..."></span>
+
+                                                </label>
+
+                                            </div>
+
+                                            <input type="hidden" id="dtp_input1" value=""/><br/>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group emoji-contant-align">
+
+                                    <label class="col-form-label" for="appendedPrependedInput"></label>
+
+                                    <div class="controls">
+
+                                        <div class="input-prepend input-group">
+
+                                            <input type="hidden" value="9000000000" name="agent_number"
+                                                   class="form-control" placeholder="Agent Number" required>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-actions">
+
+                                    <button type="submit" id="send_btn" class="btn btn-primary">Send Now</button>
+
+                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
 
                     </div>
-					
-					
-                    <div class="form-actions">
-
-                      <button type="submit" id="send_btn" class="btn btn-primary">Send Now</button>
-
-                      <button type="reset" class="btn btn-secondary">Cancel</button>
-
-                    </div>
-
-                  </form>
 
                 </div>
 
-              </div>
+                <!--/.col-->
 
             </div>
 
-            <!--/.col-->
 
-          </div>
+            <!--/.row-->
 
-          
-
-          <!--/.row-->
-
-          
-
-          
-
-         
 
         </div>
 
 
+    </div>
 
-      </div>
+    <!-- /.conainer-fluid -->
 
-      <!-- /.conainer-fluid -->
-
-    </main>
-
+</main>
 
 
+</div>
 
-
-  </div>
-
-  <?php 
+<?php
 
 include_once('footer.php')
 
@@ -287,351 +251,218 @@ include_once('footer.php')
 <script type="text/javascript" src="emoji/emojionearea.js"></script>
 
 
+<!-- Begin emoji-picker JavaScript -->
 
+<script src="lib/js/nanoscroller.min.js"></script>
 
+<script src="lib/js/tether.min.js"></script>
 
-  <!-- Begin emoji-picker JavaScript -->
+<script src="lib/js/config.js"></script>
 
-  <script src="lib/js/nanoscroller.min.js"></script>
+<script src="lib/js/util.js"></script>
 
- <script src="lib/js/tether.min.js"></script>
+<script src="lib/js/jquery.emojiarea.js"></script>
 
-  <script src="lib/js/config.js"></script>
+<script src="lib/js/emoji-picker.js"></script>
 
-  <script src="lib/js/util.js"></script>
-
-  <script src="lib/js/jquery.emojiarea.js"></script>
-
-  <script src="lib/js/emoji-picker.js"></script>
-
-  <!-- End emoji-picker JavaScript -->
+<!-- End emoji-picker JavaScript -->
 <script>
 
-  function show(str)
+    function show(str) {
 
-    {
 
-  
+        if (str == 'file') {
 
-    if(str=='file')
+            $("#second_box").show();
 
-    {
+            $("#scheduled_btn").hide();
 
-    $("#second_box").show();
+            $("#send_btn").show();
 
-    $("#scheduled_btn").hide();
+            $("#first_box").hide();
 
-    $("#send_btn").show();
+        } else {
 
-    $("#first_box").hide();
+            $("#second_box").hide();
 
-    }
+            $("#scheduled_btn").hide();
 
-    else
+            $("#send_btn").show();
 
-    {
+            $("#first_box").show();
 
-    $("#second_box").hide();
-
-    $("#scheduled_btn").hide();
-
-    $("#send_btn").show();
-
-    $("#first_box").show();
+        }
 
     }
-
-  }
-
 
 
 </script>
 <script type="text/javascript">
 
-   $(document).ready(function() {
+    $(document).ready(function () {
 
-      $("#demo1").emojioneArea({
+        $("#demo1").emojioneArea({
 
-       container: "#container",
+            container: "#container",
 
-       hideSource: false,
+            hideSource: false,
 
-       useSprite: false
+            useSprite: false
 
-      });
+        });
 
     });
 
 </script>
 
- <script>
+<script>
 
 
+    $(function () {
 
-    $(function() {
+        // Initializes and creates emoji set from sprite sheet
 
-      // Initializes and creates emoji set from sprite sheet
+        window.emojiPicker = new EmojiPicker({
 
-      window.emojiPicker = new EmojiPicker({
+            emojiable_selector: '[data-emojiable=true]',
 
-        emojiable_selector: '[data-emojiable=true]',
+            assetsPath: 'lib/img/',
 
-        assetsPath: 'lib/img/',
+            popupButtonClasses: 'fa fa-smile-o'
 
-        popupButtonClasses: 'fa fa-smile-o'
+        });
 
-      });
 
+        // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
 
 
+        // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
 
 
+        // It can be called as many times as necessary; previously converted input fields will not be converted again
 
 
-
-
-
-
-
-
-
-
-      // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      // It can be called as many times as necessary; previously converted input fields will not be converted again
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      window.emojiPicker.discover();
-
-
-
-
-
-
-
-
-
-
-
-
-
+        window.emojiPicker.discover();
 
 
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </script>
-
-
-
-
-
-
-
-<?php
-
-if(isset($_GET['f']))
-
-{
-
-if($_GET['f']=='2')
-
-{
-
-?>
-
-<script>
-
-swal({
-
-    title: "Message Sent successfully.",
-
-    //text: "Message Sucessfully Added.",
-
-    timer:3000,
-
-    showConfirmButton: false
-
-  });
-
 </script>
 
 
-
 <?php
 
+if (isset($_GET['f'])) {
+
+    if ($_GET['f'] == '2') {
+
+        ?>
+
+        <script>
+
+            swal({
+
+                title: "Message Sent successfully.",
+
+                //text: "Message Sucessfully Added.",
+
+                timer: 3000,
+
+                showConfirmButton: false
+
+            });
+
+        </script>
 
 
-}
+        <?php
 
 
+    } else if ($_GET['f'] == 'draft') {
 
-else if($_GET['f']=='draft')
+        ?>
 
-{
+        <script>
 
-?>
+            swal({
 
-<script>
+                title: "Message successfully Saved to draft.",
 
-swal({
+                //text: "Message Sucessfully Added.",
 
-    title: "Message successfully Saved to draft.",
+                timer: 3000,
 
-    //text: "Message Sucessfully Added.",
+                showConfirmButton: false
 
-    timer:3000,
+            });
 
-    showConfirmButton: false
-
-  });
-
-</script>
+        </script>
 
 
-
- 
-
+        <?php
 
 
-  
+    } else if ($_GET['f'] == 4) {
 
-<?php
-
-
-
-}
-
-
-
-else if($_GET['f']==4)
-
-{
-
-echo "<script language='javascript'>
+        echo "<script language='javascript'>
 
 alert('file Not Valid !!!');
 
 </script>";
 
 
+    } else if ($_GET['f'] == 5) {
 
-}
-
-else if($_GET['f']==5)
-
-{
-
-echo "<script language='javascript'>
+        echo "<script language='javascript'>
 
 alert('The Username & password has been sent to your emailid !!!');
 
 </script>";
 
 
-
-}
-
-else
-
-{
-
-?>
-
-<script>
-
-swal({
-
-    title: "Message successfully Saved to Schedule.",
-
-    //text: "Message Sucessfully Added.",
-
-    timer:3000,
-
-    showConfirmButton: false
-
-  });
-
-</script>
-
-<?php
-
-}
-
-}
-
-?>
-<script>
-function select_n(str) {
-	
-    if (str.length == 0) { 
-        document.getElementById("sl").innerHTML = "";
-        return;
     } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("sl").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "getn.php?q=" + str, true);
-        xmlhttp.send();
+
+        ?>
+
+        <script>
+
+            swal({
+
+                title: "Message successfully Saved to Schedule.",
+
+                //text: "Message Sucessfully Added.",
+
+                timer: 3000,
+
+                showConfirmButton: false
+
+            });
+
+        </script>
+
+        <?php
+
     }
+
 }
+
+?>
+<script>
+    function select_n(str) {
+
+        if (str.length == 0) {
+            document.getElementById("sl").innerHTML = "";
+            return;
+        } else {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("sl").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "getn.php?q=" + str, true);
+            xmlhttp.send();
+        }
+    }
 </script>

@@ -29,8 +29,6 @@ $extension = explode(".", $_FILES["file"]["name"]);
 
 
 
-
-
 if ($extension!=".xlsx" || $extension!=".txt"
 
 

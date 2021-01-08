@@ -9,10 +9,6 @@ if(!isset($_SESSION['user']))
 }
 
 
-
-
-
-
 include("connection.php");
 
 
@@ -23,19 +19,9 @@ $query = mysqli_query($con,"select * from tapp_user_login where email='".$user_e
 
 while($row = mysqli_fetch_array($query) ) {
 
-
-
 $user=$row['user_name'];
 
-
-
-
-
-
-
 $email=$row['email'];
-
-
 
 $profile_image=$row['profile_image'];
 
